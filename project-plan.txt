@@ -1,0 +1,3 @@
+create three mains pages index.html (Homepage), new-post.html (Create Post), and post.html (View/Edit Post)
+search up what is CRUD operations in javascript and learn how to use it
+then use javascript to handle CRUD operations
