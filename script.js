@@ -1,3 +1,6 @@
+//---------------------------------Homepage-------------------------------------
+
+//-------------------------------New Post Page----------------------------------
 const form = document.getElementById("create_post")
 const titleInput = document.getElementById("blog_title")
 const contentInput = document.getElementById("content")
@@ -32,3 +35,5 @@ form.addEventListener("submit", function(event)
             event.preventDefault();
         }
 })
+
+//---------------------------------Post Page-----------------------------------
