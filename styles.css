@@ -35,3 +35,9 @@ nav ul li a:hover {
     color: gray;
     text-decoration: overline;
 }
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    padding: -5px;
+}
