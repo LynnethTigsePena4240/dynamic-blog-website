@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Create New Post</title>
 </head>
 <body>
@@ -17,15 +18,19 @@
             </ul>
         </nav>
     </header>
-    <form action="">
+    <form id="create_post">
         <label for="">Blog Post Title:</label>
-        <br><input type="text">
+        <br><span class="error" id="title_error"></span>
+        <br><input type="text" id="blog_title">
         <br><br>
+
         <label for="">Blog Post Content:</label>
+        <br><span class="error" id="content_error"></span>
         <br><textarea name="content" id="content"></textarea>
+        
         <br><label for="">Insert Your Image:</label>
         <br><input type="file" id="Image" accept="image/*">
-        <br><input type="submit">
+        <br><input type="submit" id="submit_btn">
     </form>
 </body>
 </html>
