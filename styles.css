@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2{
+    margin: 30px 50px;
+}
+
+header{
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a{
+    font-size: large;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    color: gray;
+    text-decoration: overline;
+}
