@@ -7,6 +7,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    margin: 30px 50px;
+}
+
 header{
     text-align: center;
 }
@@ -29,5 +33,5 @@ nav ul li a{
 
 nav ul li a:hover {
     color: gray;
-    text-decoration: underline;
+    text-decoration: overline;
 }
