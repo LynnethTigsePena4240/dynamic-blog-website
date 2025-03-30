@@ -32,3 +32,17 @@ form.addEventListener("submit", function(event)
             event.preventDefault();
         }
 })
+
+document.addEventListener("DOMContentLoaded", function()
+{
+    const params = new URLSearchParams(window.location.search)
+    const postID = parseInt(params.get("id"))
+
+    let posts = JSON.parse(localStorage.getItem("blogPosts")) || []
+    let post = posts.find(p=>p.id === postID)
+
+    if(!post)
+    {
+        
+    }
+})
