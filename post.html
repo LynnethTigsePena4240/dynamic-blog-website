@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script src="script-post.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="file-pen-solid.svg" type="image/x-icon">
     <title>View/Edit posts</title>
@@ -19,6 +19,28 @@
             </ul>
         </nav>
     </header>
+
+    <div id="view-edit-post">
+
+    </div>
+
+    <div id="edit-form-div">
+    <form id="edit_post">
+        <input type="hidden" id="postID">
+        <label for="title">Blog Post Title:</label>
+        <br><span class="error" id="title_error"></span>
+        <br><input type="text" id="blog_title">
+        <br><br>
+
+        <label for="content">Blog Post Content:</label>
+        <br><span class="error" id="content_error"></span>
+        <br><textarea name="content" id="content"></textarea>
+        
+        <br><label for="">Insert Your Image:</label>
+        <br><input type="file" id="Image" accept="image/*">
+        <br><input type="submit" id="submit_btn">
+    </form>
+</div>
 
 </body>
 </html>
