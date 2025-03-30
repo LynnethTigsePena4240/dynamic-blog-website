@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     else
     {
         postText.innerHTML = ""
-        posts.posts.forEach(post => {
+        posts.forEach(post => {
             postText.innerHTML += `
             <div class="post">
             <h2> ${post.title} </h2>
