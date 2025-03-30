@@ -34,6 +34,16 @@ form.addEventListener("submit", function(event)
         {
             event.preventDefault();
         }
+
+    let posts = JSON.parse(localStorage.getItem("blogPosts")) || []
+    let newPost = {
+        id: posts.length > 0 ? posts[posts.length -1].id + 1: 1,
+        title:  titleInput.value,
+        content: contentInput.value
+    }
+
+    posts.push(newPost)
+    localStorage.setItem("blogPosts", JSON.stringify(posts))
 })
 
 //---------------------------------Post Page-----------------------------------
