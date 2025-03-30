@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="square-plus-solid.svg" type="image/x-icon">
+    <title>Create New Post</title>
+</head>
+<body>
+    <header>
+        <h1>Creating New Blog Post</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="new-post.html">Create Post</a></li>
+                <li><a href="post.html">View/Edit Post</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="create_post">
+        <label for="">Blog Post Title:</label>
+        <br><span class="error" id="title_error"></span>
+        <br><input type="text" id="blog_title">
+        <br><br>
+
+        <label for="">Blog Post Content:</label>
+        <br><span class="error" id="content_error"></span>
+        <br><textarea name="content" id="content"></textarea>
+        
+        <br><label for="">Insert Your Image:</label>
+        <br><input type="file" id="Image" accept="image/*">
+        <br><input type="submit" id="submit_btn">
+    </form>
+</body>
+</html>
