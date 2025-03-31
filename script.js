@@ -30,6 +30,8 @@ const submitbtn = document.getElementById("submit_btn")
 const titleErr = document.getElementById("title_error")
 const contentErr = document.getElementById("content_error")
 
+const imgInput = document.getElementById("Image")
+
 
 form.addEventListener("submit", function(event)
 {
@@ -60,9 +62,28 @@ form.addEventListener("submit", function(event)
     let newPost = {
         id: posts.length > 0 ? posts[posts.length -1].id + 1: 1,
         title:  titleInput.value,
-        content: contentInput.value
+        content: contentInput.value,
+        image: null 
     }
 
-    posts.push(newPost)
-    localStorage.setItem("blogPosts", JSON.stringify(posts))
+    if (imgInput.files.length>0)
+    {
+        const file = imgInput.files[0]
+        const reader = new FileReader()
+
+        reader.onload = function()
+        {
+            newPost.image = reader.result
+            posts.push(newPost)
+            localStorage.setItem("blogPosts", JSON.stringify(posts))
+        }
+
+        reader.readAsDataURL(file)
+    }
+    else
+    {
+        posts.push(newPost)
+        localStorage.setItem("blogPosts", JSON.stringify(posts))
+    }
+
 })

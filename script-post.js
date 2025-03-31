@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function()
                 <div class="post">
                 <h2> ${post.title} </h2>
                 <p> ${post.content}</p>
+                ${post.image ? `<img src="${post.image}"style="max-width: 100px">`:""}
+                <br>
                 <button onclick="editPost(${post.id})">Edit</button>
                 <button onclick="deletePost(${post.id})">Delete</button>
                 </div>
@@ -52,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function()
     const titleErr = document.getElementById("title_error")
     const contentErr = document.getElementById("content_error")
 
+    const imageInput = document.getElementById("Image")
+
 
     titleErr.textContent = "";
     contentErr.textContent = "";
@@ -81,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function()
         {
             post.title = titleInput.value
             post.content = contentInput.value
+            post.image = imageInput.value
         }
         return post
     })
