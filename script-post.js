@@ -39,27 +39,57 @@ document.addEventListener("DOMContentLoaded", function()
             //this is to set the title and content of the post from the post id 
             
         }
-    })
 
-    function editPost(postId)
+    document.getElementById("edit_post").addEventListener("submit", function(event)
+{
+    const titleInput = document.getElementById("blog_title")
+    const contentInput = document.getElementById("content")
+    const submitbtn = document.getElementById("submit_btn")
+    let postID = document.getElementById("postID").value
+    
+    const titleErr = document.getElementById("title_error")
+    const contentErr = document.getElementById("content_error")
+
+
+    titleErr.textContent = "";
+    contentErr.textContent = "";
+
+    let isVaild = true;
+    
+    if(titleInput.value.trim() === "")
     {
-        window.location.href = `post.html?id=${postId}`
+        titleErr.textContent = "Please enter Blog Title"
+        isVaild = false;
     }
 
-    function updatePost()
-    {
-        const postID = parseInt(document.getElementById("postID").value)
-        let posts = JSON.parse(localStorage.getItem("blogPosts")) || []
-        let postIndex = posts.findIndex(p => p.id === postID)
-
-        if(postIndex === -1)
+    if(contentInput.value.trim() === "")
         {
-            alert("post not found")
-            return
+            contentErr.textContent = "Please Enter Blog Content"
+            isVaild = false;
         }
 
-        posts[postIndex].title = document.getElementById("title").value
-        posts[postIndex].content = document.getElementById("content").value
+    if (!isVaild)
+        {
+            event.preventDefault();
+        }
 
-        localStorage.setItem("blogPosts", JSON.stringify(posts))
+    let updatePosts = posts.map(post =>
+    {
+        if (post.id === parseInt(postID))
+        {
+            post.title = titleInput.value
+            post.content = contentInput.value
+        }
+        return post
+    })
+
+    localStorage.setItem("blogPosts", JSON.stringify(updatePosts))
+
+})
+
+})
+
+function editPost(postId)
+    {
+        window.location.href = `post.html?id=${postId}`
     }
