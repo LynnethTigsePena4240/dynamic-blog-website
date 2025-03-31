@@ -8,7 +8,7 @@ h1{
 }
 
 h2{
-    margin: 30px 50px;
+    margin: 5px 50px;
 }
 
 header{
@@ -40,4 +40,14 @@ nav ul li a:hover {
     color: red;
     font-size: 0.9em;
     padding: -5px;
+}
+
+.post{
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p{
+    margin: 10px 80px;
 }

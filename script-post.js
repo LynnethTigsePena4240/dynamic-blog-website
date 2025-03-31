@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function()
                 <h2> ${post.title} </h2>
                 <p> ${post.content}</p>
                 <button onclick="editPost(${post.id})">Edit</button>
-                </div>`
+                </div>
+                <br>`
             });
         }
 
