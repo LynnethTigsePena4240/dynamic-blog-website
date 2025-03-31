@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function()
                 <h2> ${post.title} </h2>
                 <p> ${post.content}</p>
                 <button onclick="editPost(${post.id})">Edit</button>
+                <button onclick="deletePost(${post.id})">Delete</button>
                 </div>`
             });
         }
@@ -90,6 +91,16 @@ document.addEventListener("DOMContentLoaded", function()
 })
 
 function editPost(postId)
-    {
-        window.location.href = `post.html?id=${postId}`
-    }
+{
+    window.location.href = `post.html?id=${postId}`
+}
+
+function deletePost(postId)
+{
+    let posts = JSON.parse(localStorage.getItem("blogPosts")) || []
+    let updatePosts = posts.filter(post => post.id !== postId)
+
+    localStorage.setItem("blogPosts", JSON.stringify(updatePosts))
+
+    location.reload();
+}
