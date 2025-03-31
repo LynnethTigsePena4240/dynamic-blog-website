@@ -13,6 +13,9 @@ h2{
 
 header{
     text-align: center;
+    background-color: rgb(215, 215, 215);
+    padding: 10px;
+    margin: -0.5%;
 }
 nav ul{
     list-style: none;
@@ -43,6 +46,7 @@ nav ul li a:hover {
 }
 
 .post{
+    margin-top: 1%;
     border-style: solid;
     border-radius: 5px;
     padding: 5px;
@@ -50,4 +54,38 @@ nav ul li a:hover {
 
 p{
     margin: 10px 80px;
+}
+
+input[type=submit]{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(215, 215, 215);
+    width: 100px;
+    border-style: none;
+}
+
+input[type=submit]:hover{
+    background-color: rgba(215, 215, 215, 0.389);
+}
+
+input[type=file]{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(215, 215, 215);
+    width: 200px;
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(215, 215, 215);
+    width: 100px;
+    border-style: none;
+}
+
+button:hover{
+    background-color: rgba(215, 215, 215, 0.389)
 }
